@@ -1,10 +1,11 @@
-local main = Instance.new("ScreenGui", game.CoreGui)
+local main = Instance.new("ScreenGui", game.Players.LocalPlayer.PlayerGui)
 local frame = Instance.new("Frame", main)
 local editor = Instance.new("TextBox", frame)
 local banner = Instance.new("Frame", frame)
 local title = Instance.new("TextLabel", banner)
 local execute = Instance.new("TextButton", frame)
 local clear = Instance.new("TextButton", frame)
+local toggle = Instance.new("TextButton", main)
 
 main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
@@ -25,7 +26,7 @@ editor.Font = Enum.Font.Code
 editor.MultiLine = true
 editor.Text = ""
 editor.TextColor3 = Color3.fromRGB(255, 255, 255)
-editor.TextSize = 16.000
+editor.TextSize = 16
 editor.TextWrapped = true
 editor.TextXAlignment = Enum.TextXAlignment.Left
 editor.TextYAlignment = Enum.TextYAlignment.Top
@@ -43,7 +44,7 @@ title.BorderSizePixel = 0
 title.Position = UDim2.new(0.011, 0, 0, 0)
 title.Size = UDim2.new(0, 77, 0, 34)
 title.Font = Enum.Font.FredokaOne
-title.Text = "MC8 v1.0"
+title.Text = "MC8 v1.3"
 title.TextColor3 = Color3.fromRGB(255, 255, 255)
 title.TextSize = 19
 
@@ -75,4 +76,30 @@ clear.TextSize = 35
 
 clear.MouseButton1Click:Connect(function()
 	editor.Text = ""
+end)
+
+local toggled = true
+
+toggle.BackgroundColor3 = Color3.fromRGB(62, 62, 62)
+toggle.BackgroundTransparency = 0.5
+toggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+toggle.BorderSizePixel = 0
+toggle.Position = UDim2.new(0.208, 0, 0.192, 0)
+toggle.Size = UDim2.new(0, 37, 0, 352)
+toggle.TextColor3 = Color3.fromRGB(255, 255, 255)
+toggle.Text = "<"
+toggle.Font = Enum.Font.FredokaOne
+toggle.TextSize = 53
+
+toggle.MouseButton1Click:Connect(function()
+	toggled = not toggled
+	frame.Visible = toggled
+	
+	if toggled == true then
+		toggle.Text = "<"
+		toggle.Position = UDim2.new(0.208, 0, 0.192, 0)
+	else
+		toggle.Text = ">"
+		toggle.Position = UDim2.new(-0, 0, 0.192, 0)
+	end
 end)
