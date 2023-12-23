@@ -7,3 +7,6 @@ It's basically just using a loadstring() for execution which makes everything wo
 
 ## Donate
 You can sponsor me via GitHub pages.
+
+## License
+This project is licensed under the protection of the MIT License. For more information please refer to: https://opensource.org/license/MIT/
