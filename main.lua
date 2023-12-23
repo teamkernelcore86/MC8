@@ -1,4 +1,4 @@
-local main = Instance.new("ScreenGui", game.Players.LocalPlayer.PlayerGui)
+local main = Instance.new("ScreenGui", game.CoreGui)
 local frame = Instance.new("Frame", main)
 local editor = Instance.new("TextBox", frame)
 local banner = Instance.new("Frame", frame)
@@ -46,7 +46,7 @@ title.BorderSizePixel = 0
 title.Position = UDim2.new(0.011, 0, 0, 0)
 title.Size = UDim2.new(0, 77, 0, 34)
 title.Font = Enum.Font.FredokaOne
-title.Text = "MC8 v1.6"
+title.Text = "MC8 v1.7"
 title.TextColor3 = Color3.fromRGB(255, 255, 255)
 title.TextSize = 19
 
