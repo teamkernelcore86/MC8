@@ -5,7 +5,6 @@ local banner = Instance.new("Frame", frame)
 local title = Instance.new("TextLabel", banner)
 local execute = Instance.new("TextButton", frame)
 local clear = Instance.new("TextButton", frame)
-local toggle = Instance.new("TextButton", main)
 
 main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
@@ -15,6 +14,9 @@ frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 frame.BorderSizePixel = 0
 frame.Position = UDim2.new(0, 0, 0.192, 0)
 frame.Size = UDim2.new(0, 532, 0, 352)
+frame.Archivable = true
+frame.Draggable = true
+frame.Active = true
 
 editor.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
 editor.BackgroundTransparency = 0.5
@@ -44,7 +46,7 @@ title.BorderSizePixel = 0
 title.Position = UDim2.new(0.011, 0, 0, 0)
 title.Size = UDim2.new(0, 77, 0, 34)
 title.Font = Enum.Font.FredokaOne
-title.Text = "MC8 v1.4"
+title.Text = "MC8 v1.6"
 title.TextColor3 = Color3.fromRGB(255, 255, 255)
 title.TextSize = 19
 
@@ -76,30 +78,4 @@ clear.TextSize = 35
 
 clear.MouseButton1Click:Connect(function()
 	editor.Text = ""
-end)
-
-local toggled = true
-
-toggle.BackgroundColor3 = Color3.fromRGB(62, 62, 62)
-toggle.BackgroundTransparency = 0.5
-toggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
-toggle.BorderSizePixel = 0
-toggle.Position = UDim2.new(0.283, 0, 0.192, 0)
-toggle.Size = UDim2.new(0, 37, 0, 352)
-toggle.TextColor3 = Color3.fromRGB(255, 255, 255)
-toggle.Text = "<"
-toggle.Font = Enum.Font.FredokaOne
-toggle.TextSize = 53
-
-toggle.MouseButton1Click:Connect(function()
-	toggled = not toggled
-	frame.Visible = toggled
-	
-	if toggled == true then
-		toggle.Text = "<"
-		toggle.Position = UDim2.new(0.283, 0, 0.192, 0)
-	else
-		toggle.Text = ">"
-		toggle.Position = UDim2.new(-0, 0, 0.192, 0)
-	end
 end)
