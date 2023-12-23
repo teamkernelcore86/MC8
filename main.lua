@@ -44,7 +44,7 @@ title.BorderSizePixel = 0
 title.Position = UDim2.new(0.011, 0, 0, 0)
 title.Size = UDim2.new(0, 77, 0, 34)
 title.Font = Enum.Font.FredokaOne
-title.Text = "MC8 v1.3"
+title.Text = "MC8 v1.4"
 title.TextColor3 = Color3.fromRGB(255, 255, 255)
 title.TextSize = 19
 
@@ -84,7 +84,7 @@ toggle.BackgroundColor3 = Color3.fromRGB(62, 62, 62)
 toggle.BackgroundTransparency = 0.5
 toggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
 toggle.BorderSizePixel = 0
-toggle.Position = UDim2.new(0.208, 0, 0.192, 0)
+toggle.Position = UDim2.new(0.283, 0, 0.192, 0)
 toggle.Size = UDim2.new(0, 37, 0, 352)
 toggle.TextColor3 = Color3.fromRGB(255, 255, 255)
 toggle.Text = "<"
@@ -97,7 +97,7 @@ toggle.MouseButton1Click:Connect(function()
 	
 	if toggled == true then
 		toggle.Text = "<"
-		toggle.Position = UDim2.new(0.208, 0, 0.192, 0)
+		toggle.Position = UDim2.new(0.283, 0, 0.192, 0)
 	else
 		toggle.Text = ">"
 		toggle.Position = UDim2.new(-0, 0, 0.192, 0)
